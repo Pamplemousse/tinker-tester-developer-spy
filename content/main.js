@@ -1184,3 +1184,8 @@ browser.runtime.onMessage.addListener(
   }
 );
 
+
+// TODO: remove
+// proof-of-work that the module import is working
+const test = require('./test.js').test;
+test();
