@@ -355,7 +355,6 @@ function pageScript(Config, Messages) {
 
     EventTarget.prototype.addEventListener = function() {
       const elem = this;
-      const type = arguments[0];
       const fn = arguments[1];
       if (!fn || fn.__innerHandler) {
         return; // already added, or no handler
@@ -380,7 +379,6 @@ function pageScript(Config, Messages) {
 
     EventTarget.prototype.removeEventListener = function() {
       const elem = this;
-      const type = arguments[0];
       const fn = arguments[1];
       if (fn && fn.__innerHandler) {
         for (const hook of hooks) {
