@@ -455,7 +455,6 @@ function pageScript(Config, Messages) {
 
     EventTarget.prototype.addEventListener = function() {
       const elem = this;
-      const type = arguments[0];
       const fn = arguments[1];
       const options = arguments[2];
       for (const hook of hooks) {
@@ -487,7 +486,6 @@ function pageScript(Config, Messages) {
 
     EventTarget.prototype.removeEventListener = function() {
       const elem = this;
-      const type = arguments[0];
       const fn = arguments[1];
       const options = arguments[2];
       if (fn && registrations[type] && registrations[type].has(fn)) {
